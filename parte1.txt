@@ -1,0 +1,5 @@
+a)  funciona como um contrato para todas as classes de boleto. Ela garante que qualquer boleto (seja do Banco do Brasil, Itaú, etc.) terá os mesmos métodos essenciais, isso é importante porque mantém o código organizado e padronizado. O sistema sabe que, não importa o tipo de boleto, ele sempre terá essas funcionalidades disponíveis.
+
+b)  precisa ser declarada como abstract porque ela tem métodos que não foram implementados. Uma classe abstrata só existe para ser herdada.
+
+c) Reutilizar o codigo, A classe abstrata se encarrega de ligar tudo. Isso torna o código mais fácil de manter, pois se houver uma nova opção de formato, você só precisa alterar um único método na classe abstrata
