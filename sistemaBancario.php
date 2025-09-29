@@ -47,11 +47,11 @@ class BoletoBancoBrasil extends BoletoAbstrato
 {
     public function renderizarPdf(): string
     {
-        return '[PDF] Boleto BB R$' . $this->valor . 'Data de Vencimento' . $this->dataVencimento;
+        return '[PDF] Boleto BB R$ ' . $this->valor . ' Data de Vencimento ' . $this->dataVencimento;
     }
     public function renderizarHtml(): string
     {
-        return '<div>Boleto BB - R$' . $this->valor . 'Data de Vencimento' . $this->dataVencimento . '<div>';
+        return 'Boleto BB - R$' . $this->valor . ' Data de Vencimento ' . $this->dataVencimento ;
     }
 
     public function gerarCodigoBarras(): string
@@ -64,7 +64,7 @@ class BoletoBancoBrasil extends BoletoAbstrato
         //DateTime mostra a data atual.
         $dataFormat = (new DateTime($this->dataVencimento))->format('Ymd');
 
-        return '001' . $valorFormatado . $dataFormat;
+        return '0303'. $valorFormatado . $dataFormat;
     }
 
     public function validar(): bool
@@ -95,12 +95,12 @@ class BoletoItau extends BoletoAbstrato implements BoletoJuros
     }
     public function renderizarPdf(): string
     {
-        return '[PDF] Boleto Itau R$' . $this->valor . 'Data de Vencimento' . $this->dataVencimento;
+        return '[PDF] Boleto Itau R$' . $this->valor . ' Data de Vencimento ' . $this->dataVencimento;
     }
 
     public function renderizarHtml(): string
     {
-        return '<div>Boleto BB - R$' . $this->valor . 'Data de Vencimento' . $this->dataVencimento . '<div>';
+        return 'Boleto BB - R$' . $this->valor . ' Data de Vencimento ' . $this->dataVencimento;
     }
 
     public function gerarCodigoBarras(): string

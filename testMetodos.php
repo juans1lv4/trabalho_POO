@@ -4,7 +4,7 @@ require_once 'sistemaBancario.php'; // pega o codigo principal
 
 // Os valores passados aqui serão usados por todos os métodos.
 $valorBB = 15.50;
-$dataVencimentoBB = '2025-06-30';
+$dataVencimentoBB = '2025-09-11';
 $boletoBB = new BoletoBancoBrasil($valorBB, $dataVencimentoBB);
 
 // método gerarCodigoBarras
@@ -33,7 +33,7 @@ echo "Testando a classe BoletoItau";
 echo "\n";
 
 $valorItau = 50.00;
-$dataVencimentoItau = '2025-12-25';
+$dataVencimentoItau = '2025-09-11';
 $boletoItau = new BoletoItau($valorItau, $dataVencimentoItau);
 
 // método validar()
