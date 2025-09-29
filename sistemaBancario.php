@@ -57,7 +57,7 @@ class BoletoBancoBrasil extends BoletoAbstrato
     public function gerarCodigoBarras(): string
     {
 
-        //str_replace é respondavel por substituir as virgulas e pontos.
+        //str_replace é responsavel por substituir as virgulas e pontos.
         // o number_format pega o valor e garante que ele tenha duas casas decimais
         $valorFormatado = str_replace([',', '.'], '', number_format($this->valor, 2));
 
